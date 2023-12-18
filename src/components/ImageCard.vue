@@ -17,17 +17,16 @@
 
 <script>
 import moment from 'moment';
-import config from '../../config';
 
 export default {
   name: 'ImageCard',
-  props: [ 'image' ],
+  props: ['image'],
   filters: {
     moment(date) {
-      return moment(date).format("Do MMMM YYYY");
-    }
-  }
-}
+      return moment(date).format('Do MMMM YYYY');
+    },
+  },
+};
 </script>
 
 <style lang="scss">

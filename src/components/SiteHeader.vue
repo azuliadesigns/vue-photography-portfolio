@@ -1,8 +1,8 @@
 <template>
     <div>
         <header>
-            <a href="#"><h1>My Photography Site</h1></a> 
-            
+            <a href="#"><h1>My Photography Site</h1></a>
+
             <div class="menu">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -20,8 +20,8 @@
 
 <script>
 export default {
-  name: 'SiteHeader'
-}
+  name: 'SiteHeader',
+};
 </script>
 
 <style lang="scss">
@@ -39,7 +39,7 @@ export default {
         background: url("../assets/logo.png") top right;
         text-indent: -9999px;
         margin: 0 auto;
-    }    
+    }
     .menu ul {
         margin:1em 0 0 0;
         padding:0;

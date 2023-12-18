@@ -13,22 +13,22 @@
 </template>
 
 <script>
-import config from '../../config';
 import axios from 'axios';
-import SiteHeader from '@/components/SiteHeader';
-import ImageCard from '@/components/ImageCard';
+import config from '../../config';
+import SiteHeader from '../components/SiteHeader.vue';
+import ImageCard from '../components/ImageCard.vue';
 
 export default {
   name: 'home',
   components: {
     SiteHeader,
-    ImageCard
+    ImageCard,
   },
   data() {
     return {
       loading: false,
-      images: []
-    }
+      images: [],
+    };
   },
   methods: {
     loadImages() {
@@ -39,8 +39,8 @@ export default {
           this.loading = false;
         })
         .catch((error) => {
-          console.log("An error ocurred: ", error);
-        })
+          console.log('An error ocurred: ', error);
+        });
     },
     fetchImages() {
       return axios({
@@ -55,17 +55,17 @@ export default {
           format: 'json',
           nojsoncallback: 1,
           per_page: 30,
-        }
-      })
+        },
+      });
     },
   },
-  beforeMount(){
-    this.loadImages()
+  beforeMount() {
+    this.loadImages();
   },
   computed: {
     cleanImages() {
-      return this.images.filter(image => image.url_n)
-    }
+      return this.images.filter((image) => image.url_n);
+    },
   },
 };
 </script>
